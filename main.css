@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: "TuesdayNight-Regular";
+    src: url("/fonts/TuesdayNight-Regular.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "Azonix";
+    src: url("/fonts/Azonix.otf") format("opentype");
+}
+
+html {
+    position: relative;
+    font-size: 1vw; /* 默认情况下根据视口宽度动态调整字体大小 */
+}
+
+
+/* 在极小屏幕上设置最小字体大小 */
+@media (max-width: 400px) {
+    html {
+        font-size: 12px; /* 设置一个最小字体大小 */
+    }
+}
+
+/* 在中型屏幕上调整字体大小 */
+@media (min-width: 401px) and (max-width: 1200px) {
+    html {
+        font-size: 2vw; /* 根据屏幕宽度动态调整，但也受下方最大值的限制 */
+    }
+}
